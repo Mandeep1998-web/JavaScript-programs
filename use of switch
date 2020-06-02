@@ -1,0 +1,24 @@
+<html>
+<head>
+<body>
+<button onclick="myfunction()" >Click Me</button>
+<p id="demo"></p>
+<script>
+var day;
+function myfunction(){
+switch(new Date().getDay()){
+case 0:
+day="sunday";
+break;
+case 1:
+day="monday";
+break;
+case 2:
+day="tuesday";
+}
+document.getElementById("demo").innerHTML = "today is" + day;
+}
+</script>
+</body>
+</head>
+</html>
