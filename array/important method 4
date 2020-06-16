@@ -1,0 +1,4 @@
+// important splece method in array to put something in middle
+const numbers = ['one','two','three']
+numbers.splice(1,1,'something'); // represents the start positon,end,value to put
+console.log(numbers)
