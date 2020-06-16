@@ -1,0 +1,6 @@
+let youtube ={  // the variable defined by the let is a block executable and the var is function program
+    title:'for loop',
+    teacher:"hareesh choudhary",
+    finished: 35,
+}
+console.log(`hey the teacher for ${youtube.title} is ${youtube.teacher}`) // use tilde to work with dollar
