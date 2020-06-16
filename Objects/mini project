@@ -1,0 +1,19 @@
+let myTodos = { //Here we have an object called myTodos
+    day:'Monday',
+    meetings:0,
+    meetDone:0,
+}
+let addMeeting= function(todo , meet=0) {  // Here we have a function name called mywork and todo is the obectname 
+    todo.meetings=todo.meetings+meet    //access the object property
+}
+let meetDone = function(todo,meet=0){
+    todo.meetDone=todo.meetDone-meet
+}
+let getSummary =function (todo) {
+    let meetLeft=todo.meetings+todo.meetDone // here we have to do + because meetdone -meet =0-2 that give negative number
+    return `you have ${meetLeft} meetings left`   
+}
+addMeeting(myTodos,4)
+meetDone(myTodos,2)
+console.log(myTodos)
+console.log(getSummary(myTodos))
