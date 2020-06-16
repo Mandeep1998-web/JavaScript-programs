@@ -1,0 +1,4 @@
+// important method in array
+const numbers = ['one','two','three']
+console.log(numbers.unshift("zero"));
+console.log(numbers);
