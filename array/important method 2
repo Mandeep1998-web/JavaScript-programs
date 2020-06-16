@@ -1,0 +1,4 @@
+// important SHIFT method in array
+const numbers = ['one','two','three']
+numbers.shift();
+console.log(numbers);
