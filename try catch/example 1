@@ -1,0 +1,19 @@
+//Try catch to avoid program freeze in javascript
+// program to convert dollar in rupees
+const convertToRs = (dollar) => 
+{
+    if (typeof dollar === 'number'){
+    return dollar * 64
+    }else{
+        throw Error("Please enter only number value")
+    }
+}
+try {
+    const myvalue =convertToRs('five') //call
+console.log(myvalue);
+}
+ catch (e) {
+     console.log(e)  
+}
+console.log("i will not execute if  the program is crashed")
+
