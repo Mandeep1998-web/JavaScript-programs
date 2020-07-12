@@ -1,31 +1,42 @@
-var sam={
-    name:'my name is sam',
-    age:24,
-    isActive:true
+//program to demonstrate the  use of map and for of in javascript
+
+var john ={                // john is object
+    name: 'my name is john',
+    age: 23,
+    IsActive:true
 }
-var mile={
-    name:"my name is mile ",
+
+var mild={
+    name : "my name is mild",
     age:25,
-    isActive:true
-
+    IsActive:true
 }
+
 var milind={
-    name:'my name is milind',
-    age:29,
-    isActive:false
+    name:"my name is milind",
+    age :35,
+    IsActive:false
 }
-let users = new Map ()
-users.set('sam',sam) // it is basically the key value pair// so here the sam in string is key and other is variable that we are pretended
-users.set('mile',mile)
-users.set('milind',milind)
-// console.log(users.values('key'))   
-// map is different from the object because in map we can know the size by using size property but not in the case  of object
 
-// USE OF FOROF 
-//for (const values of users.values()) {
-  //  console.log(values.name)
-//}
+// Now we want to create the map
+let users = new Map() // diff between map and object that we can also find the size of the objects that is not in the case of the objects
+  //  console.log(typeof (users)); by executing it saying it is an object
+  users.set ("key1",john);
+  users.set ("key2",mild);
+  users.set ("key3",milind);
 
-var arrofarr =[['one' ,'1'], ['two', '2'],['three', '3']]
-var newMap = new Map(arrofarr)
-console.log(newMap)
+  //console.log(users.size)
+
+  //for (const value of users.values()) {
+    //  console.log(value.name)    
+  //}
+  for (const[key,value]  of users.entries()) {
+     // console.log(key + "=" + value.name)
+   // console.log(`${key} = ${value.name}`)    IN STRING LITERALS 
+  }
+
+  // users.forEach((value, key) =>  console.log(`${key} = ${value.name}`)) // use of for each
+
+  var arrofarr =[['one' , '1'], ['two' , '2'], ['three' , '3']];
+  let newmap = new Map(arrofarr);
+  console.log(arrofarr)
