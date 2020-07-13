@@ -1,0 +1,13 @@
+// progrm to change the text
+//const changes = document.querySelector('p')
+//changes.textContent = "I am being changed using javascript"
+// const changes = document.querySelectorAll('p');
+
+//changes.forEach(function(p){ 
+ // p.textContent="i am being changed using javascript"
+//})
+
+//WITH USING ARROW FUNCTION
+
+const changes = document.querySelectorAll('p');
+changes.forEach( (p) => p.textContent="i am being changes using javascript arrow function")
