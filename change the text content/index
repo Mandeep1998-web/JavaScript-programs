@@ -1,13 +1,18 @@
-// progrm to change the text
-//const changes = document.querySelector('p')
-//changes.textContent = "I am being changed using javascript"
-// const changes = document.querySelectorAll('p');
-
-//changes.forEach(function(p){ 
- // p.textContent="i am being changed using javascript"
-//})
-
-//WITH USING ARROW FUNCTION
-
-const changes = document.querySelectorAll('p');
-changes.forEach( (p) => p.textContent="i am being changes using javascript arrow function")
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+   <!-- <h1>hello world  this is my new file</h1>
+    <h2> hello world this is my new file</h2>
+    <h3> hello world this is my new file </h3> -->
+    <p id="cjfd" > fdfd</p>
+    <p class="dfkldkf"> fkdljfdjfkl</p>
+    <p >This is lower paragraph</p>
+    <script src="script.js"> </script> 
+</body>
+</html>
