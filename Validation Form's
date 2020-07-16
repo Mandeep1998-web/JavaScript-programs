@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+     <div class="container"> <!-- bootstrap columns divides in 12 --><br>
+        <h1 class="text-primary text-center" > Complete Form Validation</h1> <br> <!--text success meaning green in color-->
+         <div class="col-lg-8 m-auto d-block"> <!--large 8 margin auto and display block -->
+             <form action="#" onsubmit="return validation()"  class="bg-light" >
+                 <div class="form-group" >
+                     <label >Username:</label>
+                     <input type="text" name="user" class="form-control" id="user" Placeholder=" Enter your first name only" autocomplete="off">
+                     <span id="un" class="text-danger font-weight-bold"></span>
+                    </div>
+
+                    <div class="form-group" >
+                        <label >Password:</label> <!--we give the type text to put the same password-->
+                        <input type="text" name="pass" class="form-control" id="pass" Placeholder=" Please enter a good password" autocomplete="off">
+                        <span id="pd" class="text-danger font-weight-bold"></span>
+                    </div>
+
+                     
+                    <div class="form-group" >
+                        <label >Confirm Password:</label>
+                        <input type="text" name="conpass" class="form-control" id="conpass" Placeholder=" Please enter a same password" autocomplete="off">
+                        <span id="cp" class="text-danger font-weight-bold" ></span>
+                       </div>  
+                    
+                    
+                       <div class="form-group" >
+                        <label >Mobile No:</label>
+                        <input type="text" name="mob" class="form-control" id="mob" Placeholder=" Please enter your working mobile no" autocomplete="off">
+                        <span id="mn" class="text-danger font-weight-bold"></span>
+                       </div>
+                    
+                       
+                       <div class="form-group" >
+                        <label >Email id:</label>
+                        <input type="text" name="mail" class="form-control" id="mail" Placeholder=" Please enter your working email " autocomplete="off">
+                        <span id="el" class="text-danger font-weight-bold"></span>
+                       </div>
+
+                       <br>
+                       
+                        
+                        <input type="Submit" name="sub"  value="Submit" class="btn btn-primary"> <!--to fill the whole with blue write btn-->
+             </form>
+
+         </div>
+     </div>
+     <script type="text/javascript">
+function validation() {
+     var user=document.getElementById('user').value;
+     var pass=document.getElementById('pass').value;
+     var conpass=document.getElementById('conpass').value;
+     var mbl = document.getElementById('mob').value;
+     var mail=document.getElementById('mail').value;
+
+     if (user == '')
+     {
+         document.getElementById('un').innerHTML=" ** Please enter a username";
+         return false;
+     }
+     if (isNaN(user)){
+         doucment.getElementById('un').innerHTML= " ** Please enter only characters";
+         return false;
+     }
+     if ((user.length <=2) || (user.length>=20)) {
+        document.getElementById('un').innerHTML="**please enter the username between 2 an 20"
+        return false;
+     }
+     
+     if (pass == '')
+     {
+         document.getElementById('pd').innerHTML=" ** Please enter a password";
+         return false;
+     }
+
+     if ((pass.length <=2) || (pass.length>=20)){
+         document.getElementById('pd').innerHTML=" ** please enter the password between 5 to 20"
+        return false;
+     }
+
+
+     if (conpass == '')
+     {
+         document.getElementById('cp').innerHTML=" ** Please enter the password";
+         return false;
+     }
+
+     if(pass!=conpass)
+     {
+        document.getElementById('cp').innerHTML=" ** Please enter the same  password";
+         return false;
+     }
+     
+     if (mbl == '')
+     {
+         document.getElementById('mn').innerHTML=" ** Please enter the mobile no";
+         return false;
+     }
+     if ((mbl.length !=10)){
+         document.getElementById('mn').innerHTML=" ** please enter a correct mobile no"
+        return false;
+     }
+     
+     if (mail == '')
+     {
+         document.getElementById('el').innerHTML=" ** Please enter the email`";
+         return false;
+     }
+     if (mail.indexOf('@') <= 0){
+        document.getElementById('el').innerHTML=" ** Please enter the correct email`";
+         return false;
+     }
+     if ((mail.charAt(mail.length-4 !='.')) || (mail.charAT(mail.length-3 !='.')))
+        {
+
+        document.getElementById('el').innerHTML= "** please be sure about the . position"
+         return false;
+     }
+
+
+          
+    }
+    </script>
+    
+</body>
+</html>
