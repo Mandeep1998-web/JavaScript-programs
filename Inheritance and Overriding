@@ -1,0 +1,42 @@
+class User {
+    constructor(firstname, lastname, credit) {
+        this.firstname = firstname; // Here this.firstname is the name that we create from ourside and firstname is the upperone
+        this.lastname = lastname ;
+        this.credit = credit;
+    }
+
+getfullname (){
+    let MyName= `// ${this.firstname}  ${this.lastname} is my good name`;
+    return MyName;
+}
+    editname(myname){
+        const newname =myname.split(' ');
+        this.firstname=newname[0];
+        this.lastname=newname[1];
+    }
+//    editmiddlename(myname){
+  //      const newmidname =myname.split(' ')
+    //    this.middlename=newmidname[1]
+    //}
+}
+// This is function inheritance
+class Teacher extends User {
+    constructor(firstname, lastname , credit, subject) {
+        super(firstname, lastname, credit); // **super is to call parent but if you have arrow function it will not work properly
+        this.subject=subject
+    }
+    // This is function over riding
+    getfullname(){
+        let fullname = `${this.firstname} ${this.lastname} is good  name and I teach ${this.subject}`;
+        return fullname;
+    }
+}
+const fullname = new Teacher ('mandeep','singh' ,34, 'js') ;
+//console.log(fullname)
+//console.log(fullname.getfullname());
+//TO EDIT FULLNAE
+fullname.editname("johnny anderson");
+console.log(fullname.getfullname());
+// TO EDIT MIDDLENAME
+//fullname.editmiddlename ("mandeep singh  mandy ");
+//console.log(fullname.getfullname());
