@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <p>Enter OK after enter the value</p>
+        <input  id="i" type="number" min="100" max="300" required>
+        <button onclick="checkvalidityf()">OK</button>
+        <p>if the number is less than 100 or greater than 300 , an error message will be displayed.</p>
+        <p id="demo"></p>
+        <script>
+            function checkvalidityf(){
+                var result=document.getElementById('i');
+                if(!result.checkValidity()){
+                    document.getElementById('demo').innerHTML=result.validationMessage;
+                } else {
+                    document.getElementById('demo').innerHTML="Input OK";
+                }
+                
+            }
+        </script>
+    </body>
+</html>
