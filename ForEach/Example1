@@ -1,0 +1,19 @@
+<!--use of for each to looping-->
+<html>
+    <head>
+        <body>
+            <p id="demo">traverse array elements</p>
+           
+           <script>
+                var array=['a','b','c','d','e'];
+                var text = "<ul>"
+            array.forEach(myfunction);
+             text += "</ul>";
+                document.getElementById('demo').innerHTML=text
+                function myfunction(value){
+                    text+= "<li>" + value + "</li>";
+                }
+            </script>
+        </body>
+    </head>
+</html>
