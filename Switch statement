@@ -1,0 +1,27 @@
+<html>
+        <body>
+        <p id="demo"> Use of switch statement </p>
+        <button onclick="myfunction()"> Click me</button>
+        <script>
+            var d;
+        var day =new Date().getDay()
+            function myfunction(){
+            switch(day)
+            {
+                case 0:
+                d = 'monday';
+                break;
+                case 1:
+                d ='tuesday';
+                break;
+                case  2:
+                d = 'wednesday';
+                break;
+            default :
+            d =" wrong choice"
+            }
+            document.getElementById('demo').innerHTML=d
+            }
+        </script>
+    </body>
+</html> 
