@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <body>          
+             <p id="demo"></p>
+             <script>
+              var hello;
+               hello = (val) => "hello" + val; // val is parameter
+              
+              document.getElementById("demo").innerHTML = hello("universe!");
+              </script>                
+        </body>
+    </head>
+</html>
