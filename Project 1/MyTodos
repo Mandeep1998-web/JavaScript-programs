@@ -1,0 +1,28 @@
+let myTodos ={
+    day :"monday",
+    meetings: 0,
+    meetDone :0,
+}
+let addmeetings = function (mytodos,meet=0)
+{
+    mytodos.meetings = mytodos.meetings + meet
+}
+let completemeetings =  function (mytodos , meet=0)
+{
+    mytodos.meetDone = mytodos.meetDone - meet
+}
+let ResetDay = function(mytodos)
+{
+    mytodos.meetings = 0;
+   mytodos.meetDone = 0;
+}
+let leftMeetings = function (mytodos){
+    let meetleft= mytodos.meetings + mytodos.meetDone
+    return (`you have ${meetleft} meetings today`)
+}
+
+addmeetings(myTodos,4)
+addmeetings(myTodos,2)
+completemeetings(myTodos,5)
+console.log(myTodos)
+console.log(leftMeetings(myTodos))
