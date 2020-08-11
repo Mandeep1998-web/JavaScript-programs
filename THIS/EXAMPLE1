@@ -1,0 +1,16 @@
+let todo = {
+day : "monday",
+meeting : 0,
+meetdone :0,
+addmeeting: function(num) // initially value of parameter  is 0
+{
+    // meeting = meeting + num; This gives me an error that meeting is not defined
+    this.meeting = this.meeting + num;
+},
+summary :  function()
+{
+    return `you have ${this.meeting} meeting now `
+}
+}
+todo.addmeeting(4);
+console.log(todo.summary());
